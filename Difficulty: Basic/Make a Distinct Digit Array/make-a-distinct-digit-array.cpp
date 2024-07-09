@@ -9,7 +9,7 @@ class Solution{
 	public:
    	vector<int>  common_digits(vector<int>nums){
    	    // Code here
-   	    int ans[10]={0};
+   	      int ans[10]={0};
    	    for(int i=0;i<nums.size();i++)
    	    {
    	        int n=nums[i];
