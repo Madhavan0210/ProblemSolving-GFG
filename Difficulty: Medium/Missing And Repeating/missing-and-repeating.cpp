@@ -10,7 +10,6 @@ public:
         // code here
          int hash[n + 1] = {0};
 
-    //update the hash array:
     for (int i = 0; i < n; i++) {
         hash[a[i]]++;
     }
