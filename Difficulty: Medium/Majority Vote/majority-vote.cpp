@@ -7,7 +7,7 @@ class Solution {
   public:
     vector<int> Solve(int n, vector<int>& nums) {
         // Code here
-         int el1=INT_MIN;
+          int el1=INT_MIN;
         int el2=INT_MIN;
         int cnt1=0,cnt2=0;
         for(int i=0;i<nums.size();i++)
@@ -39,7 +39,6 @@ class Solution {
            if(cnt4>min) ls.push_back(el2);
            if(ls.size()==0) ls.push_back(-1);
           return ls;
-          
     }
 };
 
