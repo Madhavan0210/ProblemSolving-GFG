@@ -10,8 +10,8 @@ class Solution {
     // Should return true if there exists a triplet in the
     // array arr[] which sums to x. Otherwise false
     bool find3Numbers(int nums[], int n, int x) {
-        // Your Code Herevector<vector<int>>ans;
-        vector<vector<int>>ans;
+        // Your Code Here
+         vector<vector<int>>ans;
         sort(nums,nums+n);
         for(int i=0;i<n;i++)
         {
