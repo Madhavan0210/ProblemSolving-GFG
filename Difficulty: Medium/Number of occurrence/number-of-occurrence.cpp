@@ -10,11 +10,49 @@ class Solution{
 public:	
 	/* if x is present in arr[] then returns the count
 		of occurrences of x, otherwise returns 0. */
-	int count(int arr[], int n, int x) {
+		int firstoccur(int nums[],int target,int n)
+     {
+      int low=0,high=n-1;
+      int first=n;
+      while(low<=high)
+      {
+        int mid=(low+high)/2;
+        if(nums[mid]>=target) 
+        {
+          first=mid;
+          high=mid-1;  
+        }
+        else if(nums[mid]<target) low=mid+1;
+        else high=mid-1;
+      }  
+      return first;
+     }
+     //lastoocurence
+      int lastoccur(int nums[],int target,int n)
+     {
+      int low=0,high=n-1;
+      int last=n;
+      while(low<=high)
+      {
+        int mid=(low+high)/2;
+        if(nums[mid]>target) 
+        {
+          last=mid;
+          high=mid-1;  
+        }
+        else low=mid+1;
+      }  
+      return last;
+     }
+	int count(int nums[], int n, int target) {
 	    // code here
-	    int count=0;
-	    for(int i=0;i<n;i++) if(arr[i]==x) count++;
-	    return count;
+        int first=firstoccur(nums,target,n);
+        if(first==n||nums[first]!=target)
+        {
+            return 0;
+        }
+        int last=lastoccur(nums,target,n);
+        return last-first;
 	}
 };
 
