@@ -10,7 +10,7 @@ class Solution {
   public:
     long long int floorSqrt(long long int n) {
         // Your code goes here
-          long long low=1,high=n,ans=0;
+         long long low=1,high=n,ans=0;
         while(low<=high)
         {
             long long mid=(low+high)/2;
@@ -38,6 +38,9 @@ int main() {
         cin >> n;
         Solution obj;
         cout << obj.floorSqrt(n) << endl;
+
+        cout << "~"
+             << "\n";
     }
     return 0;
 }
