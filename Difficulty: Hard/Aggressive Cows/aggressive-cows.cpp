@@ -1,5 +1,6 @@
 //{ Driver Code Starts
-// Initial Template for C++
+// Initial function template for C++
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -8,8 +9,7 @@ using namespace std;
 // User function Template for C++
 
 class Solution {
-public:
-
+  public:
 bool func(vector<int> &arr,int mid,int k)
 {
    int cnt=1,last=arr[0];
@@ -24,10 +24,10 @@ bool func(vector<int> &arr,int mid,int k)
    } 
    return false;
 }
-    int solve(int n, int k, vector<int> &arr) {
-    
+    int aggresiveCows(vector<int> &arr, int k) {
+
         // Write your code here
-        sort(arr.begin(),arr.end());
+         sort(arr.begin(),arr.end());
         int ans=-1;
          int low=0,high=(arr.back()-arr[0]);
     while(low<=high)
@@ -40,38 +40,40 @@ bool func(vector<int> &arr,int mid,int k)
       }
       else high=mid-1; 
     }
-    return ans;
+     return ans;
     }
 };
 
 //{ Driver Code Starts.
 
 int main() {
-    int t = 1;
-    cin >> t;
+    int test_case;
+    cin >> test_case;
+    cin.ignore();
+    while (test_case--) {
 
-    // freopen ("output_gfg.txt", "w", stdout);
-
-    while (t--) {
-        // Input
-
-        int n, k;
-        cin >> n >> k;
-
-        vector<int> stalls(n);
-        for (int i = 0; i < n; i++) {
-            cin >> stalls[i];
+        int k;
+        vector<int> arr;
+        string input;
+        getline(cin, input);
+        stringstream ss(input);
+        int number;
+        while (ss >> number) {
+            arr.push_back(number);
         }
-        // char ch;
-        // cin >> ch;
-
-        Solution obj;
-        cout << obj.solve(n, k, stalls) << endl;
-
-        // cout << "~\n";
+        string in;
+        getline(cin, in);
+        stringstream sss(in);
+        int num;
+        while (sss >> num) {
+            k = num;
+        }
+        Solution ob;
+        int ans = ob.aggresiveCows(arr, k);
+        cout << ans << endl;
+        cout << "~" << endl;
     }
-    // fclose(stdout);
-
     return 0;
 }
+
 // } Driver Code Ends
