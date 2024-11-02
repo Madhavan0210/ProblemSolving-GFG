@@ -10,7 +10,7 @@ class Solution {
     // Function to return sum of elements
     int sum(vector<int>& arr) {
         // code here
-         int sum=0;
+          int sum=0;
         for(int i=0;i<arr.size();i++)
         {
             sum+=arr[i];
@@ -37,7 +37,7 @@ int main() {
         }
         Solution ob;
         int ans = ob.sum(nums); // Pass the vector nums to the sum function
-        cout << ans << "\n";
+        cout << ans << "\n~\n";
     }
     return 0;
 }
