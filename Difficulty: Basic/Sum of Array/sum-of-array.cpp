@@ -8,9 +8,9 @@ using namespace std;
 class Solution {
   public:
     // Function to return sum of elements
-    int sum(vector<int>& arr) {
+    int arraySum(vector<int>& arr) {
         // code here
-          int sum=0;
+           int sum=0;
         for(int i=0;i<arr.size();i++)
         {
             sum+=arr[i];
@@ -36,7 +36,7 @@ int main() {
             nums.push_back(num);
         }
         Solution ob;
-        int ans = ob.sum(nums); // Pass the vector nums to the sum function
+        int ans = ob.arraySum(nums); // Pass the vector nums to the sum function
         cout << ans << "\n~\n";
     }
     return 0;
