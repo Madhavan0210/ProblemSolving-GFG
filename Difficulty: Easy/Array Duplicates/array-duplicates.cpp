@@ -8,7 +8,7 @@ class Solution {
   public:
     vector<int> findDuplicates(vector<int>& arr) {
         // code here
-        vector<int>res;
+         vector<int>res;
 int n=arr.size();
 int freq[n]={0};
 for(int i=0;i<n;i++){
@@ -43,6 +43,7 @@ int main() {
 
         Solution obj;
         vector<int> result = obj.findDuplicates(a);
+        sort(result.begin(), result.end());
 
         // Print the result in the required format
         if (result.empty()) {
@@ -54,7 +55,8 @@ int main() {
                 cout << result[i];
             }
         }
-        cout << endl; // Ensure new line after each test case output
+        cout << endl;
+        cout << "~" << endl;
     }
 
     return 0;
