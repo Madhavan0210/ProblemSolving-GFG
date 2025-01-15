@@ -6,12 +6,12 @@ using namespace std;
 // } Driver Code Ends
 class Solution {
   public:
-    string oddEven(int N) {
+    bool isEven(int N) {
         // code here
          if(N%2==0)
-          return "even";
+          return 1;
         else
-          return "odd";
+          return 0;
     }
 };
 
@@ -23,7 +23,11 @@ int main() {
         int N;
         cin >> N;
         Solution ob;
-        cout << ob.oddEven(N) << endl;
+        if (ob.isEven(N))
+            cout << "true" << endl;
+        else
+            cout << "false" << endl;
+        cout << "~\n";
     }
     return 0;
 }
