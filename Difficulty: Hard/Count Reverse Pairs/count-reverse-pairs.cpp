@@ -58,11 +58,11 @@ class Solution {
         merge(arr, low, mid, high);  
         return cnt;
     }
-    
-   
     int countRevPairs(int n, vector<int> arr) {
         // Code here
+        
         return mergeSort(arr, 0, n - 1);
+
     }
 };
 
@@ -83,7 +83,9 @@ int main() {
 
         Solution obj;
         cout << obj.countRevPairs(n, arr) << endl;
-    }
+    
+cout << "~" << "\n";
+}
     return 0;
 }
 // } Driver Code Ends
