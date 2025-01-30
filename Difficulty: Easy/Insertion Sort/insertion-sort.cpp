@@ -1,24 +1,13 @@
 //{ Driver Code Starts
-// C program for insertion sort
-#include <stdio.h>
-#include <math.h>
-
-/* Function to print an array */
-void printArray(int arr[], int size)
-{
-    int i;
-    for (i=0; i < size; i++)
-        printf("%d ", arr[i]);
-    printf("\n");
-}
+#include <bits/stdc++.h>
+using namespace std;
 
 
 // } Driver Code Ends
-class Solution
-{
-    public:
-        //code here
-     void insert(int arr[], int i)
+class Solution {
+  public:
+    // Please change the array in-place
+     void insert(vector<int>&arr, int i)
     {
         //code here
         int j=i;
@@ -30,36 +19,38 @@ class Solution
             j--;
         }
     }
-     public:
-    //Function to sort the array using insertion sort algorithm.
-    void insertionSort(int arr[], int n)
-    {
-        //code here
-        for(int i=0;i<=n-1;i++)
+    void insertionSort(vector<int>& arr) {
+        // code here
+        int n=arr.size();
+         for(int i=0;i<=n-1;i++)
         {
             insert(arr,i);
         }
     }
-    
 };
 
 //{ Driver Code Starts.
-int main()
-{
-    int arr[1000],n,T,i;
 
-    scanf("%d",&T);
-
-    while(T--){
-
-    scanf("%d",&n);
-
-    for(i=0;i<n;i++)
-      scanf("%d",&arr[i]);
-
-    Solution ob;
-    ob.insertionSort(arr, n);
-    printArray(arr, n);
+int main() {
+    string ts;
+    getline(cin, ts);
+    int t = stoi(ts);
+    while (t--) {
+        vector<int> arr;
+        string input;
+        getline(cin, input);
+        stringstream ss(input);
+        int number;
+        while (ss >> number) {
+            arr.push_back(number);
+        }
+        Solution obj;
+        obj.insertionSort(arr);
+        for (int i = 0; i < arr.size(); i++) {
+            cout << arr[i] << " ";
+        }
+        cout << endl;
+        cout << "~" << endl;
     }
     return 0;
 }
