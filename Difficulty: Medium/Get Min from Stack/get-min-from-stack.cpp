@@ -6,8 +6,8 @@ using namespace std;
 // } Driver Code Ends
 
 class Solution {
-  public:
-     stack<pair<int,int>>st;
+    public:
+  stack<pair<int,int>>st;
      int mini;
     Solution() {
         // code here
@@ -47,7 +47,6 @@ class Solution {
         if(st.empty()) return -1;
         return st.top().second;
     }
-     
 };
 
 
