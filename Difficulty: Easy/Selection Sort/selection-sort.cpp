@@ -1,19 +1,32 @@
 //{ Driver Code Starts
 #include <bits/stdc++.h>
 using namespace std;
-void swap(int *xp, int *yp)
-{
-    int temp = *xp;
-    *xp = *yp;
-    *yp = temp;
-}
+
+class Array {
+  public:
+    template <class T>
+    static void input(vector<T> &A, int n) {
+        for (int i = 0; i < n; i++) {
+            scanf("%d ", &A[i]);
+        }
+    }
+
+    template <class T>
+    static void print(vector<T> &A) {
+        for (int i = 0; i < A.size(); i++) {
+            cout << A[i] << " ";
+        }
+        cout << endl;
+    }
+};
 
 
 // } Driver Code Ends
-class Solution
-{
-    public:
-    int select(int arr[], int i,int n)
+
+class Solution {
+  public:
+    // Function to perform selection sort on the given array.
+    int select(vector<int>arr, int i,int n)
     {
         // code here such that selectionSort() sorts arr[]
           int mmi=i;
@@ -23,48 +36,41 @@ class Solution
         }
         return mmi;
     }
-     
-    void selectionSort(int arr[], int n)
-    {
-       //code here
+    void selectionSort(vector<int> &arr) {
+        // code here/code here
+        int n=arr.size();
          for(int i=0;i<=n-2;i++)
     {
       int minindex=select(arr,i,n);
       swap(arr[i],arr[minindex]);
     }
+        
     }
 };
 
+
 //{ Driver Code Starts.
- 
-/* Function to print an array */
-void printArray(int arr[], int size)
-{
-    int i;
-    for (i=0; i < size; i++)
-        printf("%d ", arr[i]);
-    printf("\n");
-}
- 
-// Driver program to test above functions
-int main()
-{
-    int arr[1000],n,T,i;
-  
-    scanf("%d",&T);
-    
-    while(T--){
-        
-    scanf("%d",&n);
-    
-    for(i=0;i<n;i++)
-      scanf("%d",&arr[i]);
-      
-    Solution ob;  
-    ob.selectionSort(arr, n);
-    printArray(arr, n);
+
+int main() {
+    int t;
+    scanf("%d ", &t);
+    while (t--) {
+
+        vector<int> a;
+        string input;
+        getline(cin, input);
+        stringstream ss(input);
+        int number;
+        while (ss >> number) {
+            a.push_back(number);
+        }
+
+        Solution obj;
+        obj.selectionSort(a);
+
+        Array::print(a);
+        cout << "~" << endl;
     }
-    return 0;
 }
 
 // } Driver Code Ends
