@@ -9,7 +9,7 @@ using namespace std;
 class Solution {
   public:
     // Function to return sum of elements
-    int sum(vector<int>&arr,int n)
+     int sum(vector<int>&arr,int n)
     {
         if(n==arr.size()) return 0;
         return arr[n]+sum(arr,n+1);
