@@ -4,20 +4,22 @@ using namespace std;
 
 
 // } Driver Code Ends
+
 // User function template for C++
 class Solution {
   public:
     // Function to return sum of elements
+    int sum(vector<int>&arr,int n)
+    {
+        if(n==arr.size()) return 0;
+        return arr[n]+sum(arr,n+1);
+    }
     int arraySum(vector<int>& arr) {
         // code here
-           int sum=0;
-        for(int i=0;i<arr.size();i++)
-        {
-            sum+=arr[i];
-        }
-        return sum;
+        return sum(arr,0);
     }
 };
+
 
 //{ Driver Code Starts.
 
