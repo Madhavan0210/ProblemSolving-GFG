@@ -11,6 +11,7 @@ public:
     }
 };
 */
+
 class Solution {
   public:
     int helper(Node* root)
@@ -22,6 +23,6 @@ class Solution {
     }
     int height(Node* root) {
         // code here
-         return helper(root)-1;
+           return helper(root)-1;
     }
 };
