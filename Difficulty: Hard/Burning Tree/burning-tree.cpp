@@ -11,9 +11,10 @@ class Node {
     }
 };
 */
+
 class Solution {
   public:
-     void parentmark(Node *root,unordered_map<Node*,Node*>&parent)
+   void parentmark(Node *root,unordered_map<Node*,Node*>&parent)
   {
     queue<Node*>q;
     q.push(root);
@@ -89,5 +90,4 @@ class Solution {
     }
     return t-1;
     }
-        
 };
