@@ -15,7 +15,7 @@ void sibling(Node* root,vector<int>&ans)
 }
 vector<int> noSibling(Node* node) {
     // code here
-    vector<int>ans;
+     vector<int>ans;
     sibling(node,ans);
     if(ans.size()==0) ans.push_back(-1);
     sort(ans.begin(),ans.end());
