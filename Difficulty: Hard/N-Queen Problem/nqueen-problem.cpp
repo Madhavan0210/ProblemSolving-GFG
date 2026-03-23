@@ -1,15 +1,6 @@
-//{ Driver Code Starts
-// Initial Template for C++
-
-#include <bits/stdc++.h>
-using namespace std;
-
-// } Driver Code Ends
-// User function Template for C++
-
-class Solution{
-public:
-void queen(int col,vector<string>&vec,vector<vector<int>>&ans,vector<int>temp,vector<int>&leftrow,vector<int>&upper,vector<int>&lower,int n)
+class Solution {
+  public:
+   void queen(int col,vector<string>&vec,vector<vector<int>>&ans,vector<int>temp,vector<int>&leftrow,vector<int>&upper,vector<int>&lower,int n)
         {
             if(col==n)
             {
@@ -49,32 +40,3 @@ void queen(int col,vector<string>&vec,vector<vector<int>>&ans,vector<int>temp,ve
     return ans;
     }
 };
-
-//{ Driver Code Starts.
-
-int main(){
-    int t;
-    cin>>t;
-    while(t--){
-        int n;
-        cin>>n;
-        
-        Solution ob;
-        vector<vector<int>> ans = ob.nQueen(n);
-        if(ans.size() == 0)
-            cout<<-1<<"\n";
-        else {
-            for(int i = 0;i < ans.size();i++){
-                cout<<"[";
-                for(int u: ans[i])
-                    cout<<u<<" ";
-                cout<<"] ";
-            }
-            cout<<endl;
-        }
-    
-cout << "~" << "\n";
-}
-    return 0;
-}
-// } Driver Code Ends
