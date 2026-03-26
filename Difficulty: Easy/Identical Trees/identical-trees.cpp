@@ -1,25 +1,22 @@
-/* A binary tree node
-
-
-struct Node
-{
+/*
+class Node {
+public:
     int data;
-    struct Node* left;
-    struct Node* right;
+    Node* left;
+    Node* right;
 
-    Node(int x){
+    Node(int x) {
         data = x;
-        left = right = NULL;
+        left = nullptr;
+        right = nullptr;
     }
 };
 */
-
 class Solution {
   public:
-    // Function to check if two trees are identical.
-    bool isIdentical(Node *p, Node *q) {
-        // Your Code here
-         if(p==NULL || q==NULL) return p==q;
+    bool isIdentical(Node* p, Node* q) {
+        // code here
+        if(p==NULL || q==NULL) return p==q;
         return (p->data==q->data) && isIdentical(p->left,q->left) && isIdentical(p->right,q->right);
     }
 };
