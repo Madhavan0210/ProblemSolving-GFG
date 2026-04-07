@@ -1,6 +1,6 @@
 class Solution {
   public:
-   void queen(int col,vector<string>&vec,vector<vector<int>>&ans,vector<int>temp,vector<int>&leftrow,vector<int>&upper,vector<int>&lower,int n)
+  void queen(int col,vector<string>&vec,vector<vector<int>>&ans,vector<int>temp,vector<int>&leftrow,vector<int>&upper,vector<int>&lower,int n)
         {
             if(col==n)
             {
@@ -27,7 +27,7 @@ class Solution {
         }
     vector<vector<int>> nQueen(int n) {
         // code here
-        vector<vector<int>>ans;
+         vector<vector<int>>ans;
     vector<string>vec(n);
     vector<int>temp;
     string s(n,'.');
